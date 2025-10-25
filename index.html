@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Instant Mock API Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="dark-mode">
+  <header>
+    <div class="header-container">
+      <h1>⚡ Instant Mock API Generator</h1>
+      <button id="themeToggle" title="Toggle Light/Dark Mode">☀️</button>
+    </div>
+    <p>Create fake APIs instantly for testing your frontend applications</p>
+  </header>
+
+  <main>
+    <section class="form-section">
+      <h2>Create a Mock Endpoint</h2>
+      <form id="apiForm">
+        <label for="endpoint">Endpoint Name:</label>
+        <input type="text" id="endpoint" placeholder="/users" required />
+
+        <label for="method">HTTP Method:</label>
+        <select id="method">
+          <option>GET</option>
+          <option>POST</option>
+          <option>PUT</option>
+          <option>DELETE</option>
+        </select>
+
+        <label for="response">Mock JSON Response:</label>
+        <textarea
+          id="response"
+          rows="6"
+          placeholder='{"message": "Success"}'
+          required
+        ></textarea>
+
+        <button type="submit">Generate Mock API</button>
+      </form>
+    </section>
+
+    <section class="output-section">
+      <h2>Generated API Preview</h2>
+      <div id="outputContainer" class="output-box">
+        <p>No mock API generated yet.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>| © 2025 Instant Mock API Generator |</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
